@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <img src="images/logo.svg" alt="site logo" />
+      </nav>
+      <header>
+        <h1>We are launching <span>soon!</span></h1>
+        <p class="description">Subscribe and get notified</p>
+
+        <div class="container">
+          <form id="emailForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Your email address…"
+            />
+            <button id="notify-btn" type="submit">Notify Me</button>
+            <p class="error-message" id="errorMessage"></p>
+          </form>
+        </div>
+      </header>
+      <section>
+        <img src="images/illustration-dashboard.png" alt="hero image" />
+      </section>
+      <footer>
+        <div class="icons">
+          <img class="icon" src="images/facebook.svg" alt="fb icon" />
+          <img class="icon" src="images/twitter.svg" alt="tw icon" />
+          <img class="icon" src="images/instagram.svg" alt="ig icon" />
+        </div>
+        <div>
+          <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
