@@ -98,8 +98,8 @@ header .description {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.15px;
-  width: 208px;
-  margin-left: 24px;
+  /* width: 208px; */
+  padding-right: 302px;
 }
 #emailInput.error-input {
   border: 1px solid var(--Light-Red);
@@ -178,8 +178,8 @@ footer .icons {
     margin: 0;
     font-size: 10px;
     letter-spacing: 0.125px;
-    width: 172px;
-    margin-left: 2px;
+    /* width: 172px; */
+    padding-right: 0;
   }
   section img {
     width: 320px;
