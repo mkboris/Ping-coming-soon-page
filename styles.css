@@ -255,10 +255,10 @@ footer .icons {
   .error-message {
     position: absolute;
     margin: 0;
-    font-size: 10px;
-    letter-spacing: 0.125px;
+    font-size: 0.625rem;
+    letter-spacing: 0.0078125rem;
     padding-right: 0;
-    margin-left: 2px;
+    margin-left: 0.125rem;
   }
   section img {
     width: 20rem;
