@@ -9,7 +9,13 @@ document
     const emailInput = document.getElementById("emailInput");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(email)) {
+    if (!email) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent =
+        "Whoops! It looks like you forgot to add your email";
+      emailInput.classList.add("error-input");
+      emailInput.placeholder = "example@email.com";
+    } else if (!emailRegex.test(email)) {
       errorMessage.style.display = "block";
       errorMessage.textContent = "Please enter a valid email address";
       emailInput.classList.add("error-input");
