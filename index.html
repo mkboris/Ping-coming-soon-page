@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <meta
+      name="description"
+      content="Ping coming soon page - Subscribe and get notified"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -23,39 +25,53 @@
     <script defer src="script.js"></script>
   </head>
   <body>
+    <header>
+      <a aria-label="Ping's homepage" href="#"
+        ><img src="images/logo.svg" alt="Ping's logo"
+      /></a>
+    </header>
+
     <main>
-      <nav>
-        <img src="images/logo.svg" alt="Ping" />
-      </nav>
-      <header>
+      <section>
         <h1>We are launching <span>soon!</span></h1>
         <p class="description">Subscribe and get notified</p>
-
         <div class="container">
           <form id="emailForm" novalidate>
             <input
               type="email"
               id="emailInput"
               placeholder="Your email address…"
+              aria-describedby="emailError"
             />
             <button id="notify-btn" type="submit">Notify Me</button>
-            <p class="error-message" id="errorMessage"></p>
+            <p class="error-message" id="errorMessage" role="alert"></p>
           </form>
         </div>
-      </header>
-      <section>
-        <img src="images/illustration-dashboard.png" alt="" />
       </section>
-      <footer>
-        <div class="icons">
-          <img class="icon" src="images/facebook.svg" alt="facebook icon" />
-          <img class="icon" src="images/twitter.svg" alt="twitter icon" />
-          <img class="icon" src="images/instagram.svg" alt="instagram icon" />
-        </div>
-        <div>
-          <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
-        </div>
-      </footer>
+      <section class="illustration">
+        <img
+          src="images/illustration-dashboard.png"
+          alt=""
+          role="presentation"
+        />
+      </section>
     </main>
+
+    <footer>
+      <div class="icons">
+        <a aria-label="Ping's facebook profile" href="#"
+          ><img class="icon" src="images/facebook.svg" alt=""
+        /></a>
+        <a aria-label="Ping's twitter profile" href="#"
+          ><img class="icon" src="images/twitter.svg" alt="" />
+        </a>
+        <a aria-label="Ping's instagram profile" href="#">
+          <img class="icon" src="images/instagram.svg" alt=""
+        /></a>
+      </div>
+      <div>
+        <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

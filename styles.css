@@ -50,7 +50,6 @@ body {
 html,
 body {
   margin: 0;
-  padding: 0;
   border: 0;
 }
 
@@ -82,8 +81,8 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  /* display: block; */
+  width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -108,67 +107,80 @@ body {
   font-family: "Libre Franklin", sans-serif;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 0 27px;
 }
-nav {
-  margin: 5rem auto 2.75rem;
+
+header {
+  margin-top: 80px;
+  margin-bottom: 32px;
 }
-header h1 {
+
+h1 {
   margin: 0 auto;
   color: var(--Gray);
-  text-align: center;
-  font-size: 3rem;
   font-weight: 300;
-  line-height: 3.75rem;
+  font-size: 22px;
+  line-height: 145%;
+  margin-bottom: 15px;
 }
-header h1 span {
+
+h1 span {
   color: var(--Very-Dark-Blue);
   font-weight: 700;
 }
-header .description {
-  color: var(--Very-Dark-Blue);
-  font-size: 1.25rem;
+
+.description {
   font-weight: 300;
-  margin: 0.9375rem auto 2.5rem;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 32px;
+  margin-top: 0;
 }
+
+.container {
+  margin-bottom: 72px;
+}
+
 #emailForm {
-  margin-bottom: 5.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
 #emailInput {
-  width: 26.3125rem;
-  height: 3.5rem;
   border-radius: 1.75rem;
   border: 1px solid var(--Pale-Blue);
   background: #fff;
   box-shadow: 0 0 0.4375rem 0.1875rem rgba(0, 0, 0, 0);
-  padding-left: 1.875rem;
   color: var(--Pale-Blue);
-  font-size: 1rem;
+  padding: 10px 135px 10px 32px;
   font-weight: 300;
-  line-height: 1.25rem;
-  margin-right: 1rem;
+  font-size: 12px;
+  line-height: 167%;
 }
+
 #notify-btn {
-  width: 12.5rem;
-  height: 3.5rem;
-  flex-shrink: 0;
   border-radius: 1.75rem;
   background: var(--Blue);
   box-shadow: 0 0.3125rem 0.625rem 0.125rem rgba(76, 123, 243, 0.23);
   border-style: none;
-  color: #fff;
-  text-align: center;
-  font-size: 1rem;
+  color: #ffffff;
   font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  padding: 12px 112.5px;
   cursor: pointer;
 }
+
 #notify-btn:hover {
   opacity: 0.8;
 }
-.container {
-  text-align: center;
-}
+
 .error-message {
   color: var(--Light-Red);
   display: none;
@@ -184,29 +196,29 @@ header .description {
 #emailInput.error-input {
   border: 1px solid var(--Light-Red);
 }
-section img {
-  width: 40rem;
-  min-height: 23.9375rem;
-  margin-bottom: 4.875rem;
+
+.illustration {
+  margin-bottom: 120px;
 }
+
+.illustration img {
+  max-width: 640px;
+}
+
 .icon {
-  width: 1.25rem;
+  width: 32px;
   filter: invert(41%) sepia(58%) saturate(1165%) hue-rotate(197deg)
     brightness(99%) contrast(93%);
-  margin-bottom: 1.875rem;
 }
-.icon:hover {
-  cursor: pointer;
-  filter: invert(60%) sepia(1%) saturate(1195%) hue-rotate(320deg)
-    brightness(101%) contrast(88%);
-}
-footer .icons {
-  margin: auto;
+
+.icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 11.71px;
+  margin-bottom: 25px;
 }
+
 .copyright {
   color: var(--Gray);
   font-size: 0.75rem;
@@ -215,58 +227,53 @@ footer .icons {
   margin-bottom: 3.0625rem;
 }
 
-@media screen and (max-width: 41.25rem) {
-  nav img {
-    width: 3.5rem;
-  }
-  nav {
-    margin: 5.0625rem auto 2rem;
-  }
-  header h1 {
-    margin: 0 auto;
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-  header .description {
-    font-size: 0.75rem;
-    margin: 0.9375rem auto 2rem;
-  }
+@media screen and (min-width: 780px) {
   #emailForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 4.5rem;
+    flex-direction: row;
+    gap: 16px;
   }
-  #emailInput,
+
   #notify-btn {
-    display: block;
-    width: 17.625rem;
-    min-height: 2.5rem;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 18px 62px;
   }
+}
+
+@media screen and (min-width: 432px) {
+  header {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 125%;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    margin-bottom: 94px;
+  }
+
   #emailInput {
-    margin-bottom: 1.25rem;
-    margin-right: 0;
-    font-size: 0.75rem;
+    font-size: 16px;
+    line-height: 125%;
+    padding: 18px 240px 18px 30px;
   }
+
   #notify-btn {
-    font-size: 0.95rem;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
-  .error-message {
-    position: absolute;
-    margin: 0;
-    font-size: 0.625rem;
-    letter-spacing: 0.0078125rem;
-    padding-right: 0;
-    margin-left: 0.125rem;
-  }
-  section img {
-    width: 20rem;
-    min-height: 12rem;
-    margin-bottom: 7.5rem;
-  }
-  .copyright {
-    font-size: 0.625rem;
-    margin-bottom: 2.3125rem;
+
+  .illustration {
+    margin-bottom: 72px;
   }
 }
