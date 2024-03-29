@@ -37,14 +37,17 @@
         <p class="description">Subscribe and get notified</p>
         <div class="container">
           <form id="emailForm" novalidate>
-            <input
-              type="email"
-              id="emailInput"
-              placeholder="Your email address…"
-              aria-describedby="emailError"
-            />
+            <div class="input--error">
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="Your email address…"
+                aria-describedby="emailError"
+              />
+              <p class="error-message" id="errorMessage" role="alert"></p>
+            </div>
+
             <button id="notify-btn" type="submit">Notify Me</button>
-            <p class="error-message" id="errorMessage" role="alert"></p>
           </form>
         </div>
       </section>
